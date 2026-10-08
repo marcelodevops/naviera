@@ -219,7 +219,7 @@
     <div class="ticker-track flex items-center whitespace-nowrap" style="width: max-content;">
       <div class="flex items-center gap-12 px-6 text-xs">
         <span class="text-orange-300 font-semibold">● NUEVA RUTA</span>
-        <span class="text-slate-500">Arica → Rapa Nui: próxima salida 15 de julio</span>
+        <span class="text-slate-500">Arica → Rapa Nui: próxima salida martes 06:00 hrs</span>
         <span class="text-slate-600">|</span>
         <span class="text-cyan-400 font-semibold">● OPERATIVO</span>
         <span class="text-slate-500">Buque TAINA IV zarpó con 68 contenedores</span>
@@ -233,7 +233,7 @@
       </div>
       <div class="flex items-center gap-12 px-6 text-xs">
         <span class="text-orange-300 font-semibold">● NUEVA RUTA</span>
-        <span class="text-slate-500">Arica → Rapa Nui: próxima salida 15 de julio</span>
+        <span class="text-slate-500">Arica → Rapa Nui: próxima salida martes 06:00 hrs</span>
         <span class="text-slate-600">|</span>
         <span class="text-cyan-400 font-semibold">● OPERATIVO</span>
         <span class="text-slate-500">Buque TAINA IV zarpó con 68 contenedores</span>
@@ -784,7 +784,9 @@
     const countObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target,target=parseInt(el.dataset.count),start=performance.now();(function upd(t){const p=Math.min((t-start)/2000,1),v=Math.floor((1-Math.pow(1-p,3))*target);el.textContent=v.toLocaleString('es-CL');p<1?requestAnimationFrame(upd):el.textContent=target.toLocaleString('es-CL');})(start);countObs.unobserve(el);}});},{threshold:0.5});
     document.querySelectorAll('[data-count]').forEach(el=>countObs.observe(el));
 
-    const cEl=document.getElementById('countdown');let tH=72;function uCd(){const d=Math.floor(tH/24),h=tH%24;cEl.textContent=d>0?`${d}d ${h}h`:`${h}h`;if(--tH<0)tH=168;}uCd();setInterval(uCd,60000);
+    const cEl=document.getElementById('countdown');
+    function nextDeparture(){const n=new Date(),d=new Date(n);d.setDate(d.getDate()+((2-d.getDay()+7)%7));d.setHours(6,0,0,0);if(d<=n)d.setDate(d.getDate()+7);return d;}
+    function uCd(){const h=Math.max(0,Math.floor((nextDeparture()-new Date())/36e5)),d=Math.floor(h/24);cEl.textContent=d>0?`${d}d ${h%24}h`:`${h}h`;}uCd();setInterval(uCd,60000);
 
     document.querySelectorAll('.tab-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById('tab-'+btn.dataset.tab).classList.add('active');});});
 
