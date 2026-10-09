@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find . -maxdepth 3 -not -path './.git*' | head -80)",
+      "Bash(mkdir -p \"/Users/mac/Library/Application Support/Qoder/Channel/45579d62-04ea-e57b-71e3-24a1f9926d86/scratchpad\" && cp index.html \"/Users/mac/Library/Application Support/Qoder/Channel/45579d62-04ea-e57b-71e3-24a1f9926d86/scratchpad/index.final.html\" && shasum index.html \"/Users/mac/Library/Application Support/Qoder/Channel/45579d62-04ea-e57b-71e3-24a1f9926d86/scratchpad/index.final.html\")",
+      "Bash(git add index.html && git commit -m \"$\\(cat <<'EOF'\nfeat: landing page TAINA envíos marítimos Chile → Rapa Nui\n\nPágina estática inicial: hero, tracker de carga demo, estimador de\ntiempos, rutas, servicios, flota, clientes, FAQ y formularios de cotización.\nEOF\n\\)\" && git log --oneline)"
+    ]
+  }
+}
