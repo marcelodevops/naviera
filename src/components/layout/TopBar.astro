@@ -1,0 +1,27 @@
+---
+import Icon from '../ui/Icon.astro';
+---
+
+<div class="top-bar-animate fixed top-0 left-0 right-0 z-[60] border-b border-white/5" style="background:rgba(5,5,5,0.85);backdrop-filter:blur(12px)">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-9 text-xs">
+    <div class="hidden md:flex items-center gap-6">
+      <a href="tel:+56322108800" class="flex items-center gap-1.5 text-slate-500 hover:text-cyan-300 transition-colors">
+        <Icon name="phone" width={11} height={11} /> +56 32 210 8800
+      </a>
+      <a href="mailto:cargo@taina.cl" class="flex items-center gap-1.5 text-slate-500 hover:text-cyan-300 transition-colors">
+        <Icon name="mail" width={11} height={11} /> cargo@taina.cl
+      </a>
+    </div>
+    <a href="#tracker" class="flex items-center gap-2 flex-1 max-w-xs mx-auto cursor-pointer group">
+      <Icon name="search" width={12} height={12} class="text-cyan-400 flex-shrink-0" />
+      <span class="text-slate-600 group-hover:text-slate-400 transition-colors">Rastrear carga — ingrese BL o guía</span>
+    </a>
+    <div class="hidden md:flex items-center gap-4">
+      <span class="flex items-center gap-1.5 text-slate-500">
+        <span class="w-1.5 h-1.5 bg-teal-400 rounded-full animate-pulse"></span> Operaciones normales
+      </span>
+      <span class="text-slate-600">|</span>
+      <a href="#contacto" class="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">Cotizar</a>
+    </div>
+  </div>
+</div>

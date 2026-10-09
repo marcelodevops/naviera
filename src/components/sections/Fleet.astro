@@ -1,0 +1,34 @@
+---
+import Icon from '../ui/Icon.astro';
+---
+
+<section id="flota" class="relative py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+      <div>
+        <div class="reveal">
+          <p class="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-4">Nuestra flota</p>
+          <h2 class="text-3xl md:text-4xl font-semibold tracking-tight leading-tight mb-6"><span class="bg-clip-text text-transparent" style="background-image:linear-gradient(to right,#fff,#94a3b8)">8 buques dedicados a la ruta del Pacífico</span></h2>
+          <p class="text-lg text-slate-400 leading-relaxed mb-8">Buques Ro-Ro y de carga general para contenedores, vehículos y carga rodante.</p>
+        </div>
+        <div class="reveal grid grid-cols-2 gap-4 mb-8">
+          <div class="rounded-xl p-4 border border-white/10" style="background:rgba(255,255,255,0.02)"><div class="text-2xl font-bold text-cyan-400 mb-1">8</div><div class="text-xs text-slate-500 uppercase tracking-wide">Buques activos</div></div>
+          <div class="rounded-xl p-4 border border-white/10" style="background:rgba(255,255,255,0.02)"><div class="text-2xl font-bold text-cyan-400 mb-1">520</div><div class="text-xs text-slate-500 uppercase tracking-wide">TEU capacidad</div></div>
+          <div class="rounded-xl p-4 border border-white/10" style="background:rgba(255,255,255,0.02)"><div class="text-2xl font-bold text-teal-400 mb-1">99.2%</div><div class="text-xs text-slate-500 uppercase tracking-wide">Cumplimiento</div></div>
+          <div class="rounded-xl p-4 border border-white/10" style="background:rgba(255,255,255,0.02)"><div class="text-2xl font-bold text-cyan-400 mb-1">15</div><div class="text-xs text-slate-500 uppercase tracking-wide">Años exp.</div></div>
+        </div>
+      </div>
+      <div class="reveal relative">
+        <div class="rounded-2xl overflow-hidden border border-white/10"><img src="https://picsum.photos/seed/cargo-fleet-vessel/800/600.jpg" alt="Flota TAINA" loading="lazy" decoding="async" class="w-full h-auto object-cover opacity-80" /></div>
+        <div class="absolute -bottom-4 -left-4 md:-left-8 float">
+          <div class="rounded-xl px-5 py-4 border border-white/10 flex items-center gap-3" style="background:rgba(5,5,5,0.9);backdrop-filter:blur(24px)">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-cyan-500/10">
+              <Icon name="shield-check" width={20} height={20} class="text-cyan-400" />
+            </div>
+            <div><div class="text-sm font-semibold text-white">Certificación ISM</div><div class="text-xs text-slate-500">Safety Management</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

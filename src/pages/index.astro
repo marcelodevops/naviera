@@ -1,0 +1,42 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import DecorativeBackdrop from '../components/layout/DecorativeBackdrop.astro';
+import TopBar from '../components/layout/TopBar.astro';
+import Navigation from '../components/layout/Navigation.astro';
+import Ticker from '../components/layout/Ticker.astro';
+import Hero from '../components/sections/Hero.astro';
+import WhyTaina from '../components/sections/WhyTaina.astro';
+import Tracking from '../components/sections/Tracking.astro';
+import Routes from '../components/sections/Routes.astro';
+import Services from '../components/sections/Services.astro';
+import Fleet from '../components/sections/Fleet.astro';
+import Volume from '../components/sections/Volume.astro';
+import Process from '../components/sections/Process.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+import FAQ from '../components/sections/FAQ.astro';
+import Contact from '../components/sections/Contact.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<SiteLayout>
+  <DecorativeBackdrop />
+  <TopBar />
+  <Navigation />
+  <Ticker />
+  <main>
+    <Hero />
+    <WhyTaina />
+    <Tracking />
+    <Routes />
+    <Services />
+    <Fleet />
+    <Volume />
+    <Process />
+    <Testimonials />
+    <FAQ />
+    <Contact />
+  </main>
+  <Footer />
+</SiteLayout>
+
+<script src="../scripts/main.js"></script>

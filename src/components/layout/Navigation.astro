@@ -1,0 +1,43 @@
+---
+import Icon from '../ui/Icon.astro';
+---
+
+<nav class="fixed top-9 left-0 right-0 z-50 pt-4 px-4 md:px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-center justify-between rounded-full px-4 md:px-8 py-3" style="background:rgba(255,255,255,0.03);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.08);box-shadow:0 25px 50px -12px rgba(0,0,0,0.5)">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center text-cyan-400 transition-transform duration-700 group-hover:rotate-90" style="background:rgba(34,211,238,0.08)">
+          <Icon name="anchor" width={22} height={22} />
+        </div>
+        <div class="flex flex-col leading-none">
+          <span class="font-bold text-white text-base tracking-tight">TAINA</span>
+          <span class="text-[9px] font-medium text-slate-500 uppercase tracking-widest">Logística Marítima</span>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-1">
+        <a href="#tracker" class="text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 px-5 py-2 rounded-full transition-all duration-300">Rastrear</a>
+        <a href="#rutas" class="text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 px-5 py-2 rounded-full transition-all duration-300">Rutas</a>
+        <a href="#servicios" class="text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 px-5 py-2 rounded-full transition-all duration-300">Servicios</a>
+        <a href="#flota" class="text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 px-5 py-2 rounded-full transition-all duration-300">Flota</a>
+        <a href="#clientes" class="text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 px-5 py-2 rounded-full transition-all duration-300">Clientes</a>
+        <a href="#contacto" class="text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 px-5 py-2 rounded-full transition-all duration-300">Contacto</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#contacto" class="hidden md:inline-flex cta-btn items-center gap-2 text-xs font-semibold uppercase tracking-wide text-white px-6 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5" style="background:linear-gradient(to right,#0c2d48,#134e4a);box-shadow:0 0 40px -10px rgba(34,211,238,0.3)">
+          Cotizar Envío <Icon name="arrow-right" width={14} height={14} class="transition-transform duration-300" />
+        </a>
+        <button id="menuToggle" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-colors" aria-label="Abrir menú">
+          <span id="menuIcon" class="flex items-center justify-center text-white"><Icon name="menu" width={20} height={20} /></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu md:hidden mt-2 rounded-2xl px-4 py-2" style="background:rgba(255,255,255,0.03);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.08)">
+      <a href="#tracker" class="block text-sm font-medium text-slate-400 hover:text-white px-4 py-3 rounded-lg hover:bg-white/5 transition-all">Rastrear Carga</a>
+      <a href="#rutas" class="block text-sm font-medium text-slate-400 hover:text-white px-4 py-3 rounded-lg hover:bg-white/5 transition-all">Rutas</a>
+      <a href="#servicios" class="block text-sm font-medium text-slate-400 hover:text-white px-4 py-3 rounded-lg hover:bg-white/5 transition-all">Servicios</a>
+      <a href="#flota" class="block text-sm font-medium text-slate-400 hover:text-white px-4 py-3 rounded-lg hover:bg-white/5 transition-all">Flota</a>
+      <a href="#clientes" class="block text-sm font-medium text-slate-400 hover:text-white px-4 py-3 rounded-lg hover:bg-white/5 transition-all">Clientes</a>
+      <a href="#contacto" class="block text-sm font-semibold text-cyan-400 px-4 py-3 rounded-lg hover:bg-white/5 transition-all">Cotizar Envío →</a>
+    </div>
+  </div>
+</nav>
