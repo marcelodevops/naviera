@@ -1,0 +1,14 @@
+{
+  ".qoder/settings.local.json": {
+    "mtime": 1791501022.7316964,
+    "seen": 1791501504.2521431,
+    "ast_hash": "e7117184be474ab65ee0a210731fa9f0",
+    "semantic_hash": "e7117184be474ab65ee0a210731fa9f0"
+  },
+  "index.html": {
+    "mtime": 1791501156.040242,
+    "seen": 1791501504.2521448,
+    "ast_hash": "0f2d247e0eae333bbd898b5dbc8506e3",
+    "semantic_hash": "0f2d247e0eae333bbd898b5dbc8506e3"
+  }
+}
