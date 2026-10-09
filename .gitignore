@@ -10,5 +10,14 @@
 .qoder
 graphify*
 
+# Astro build output and dependencies
+dist/
+node_modules/
+.astro/
+
 # Qoder local settings
 .qoder/
+graphify-out
+
+# graphify generated artifacts
+graphify-out/
