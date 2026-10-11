@@ -26,12 +26,12 @@ import Icon from '../ui/Icon.astro';
         <a href="#contacto" class="hidden md:inline-flex cta-btn items-center gap-2 text-xs font-semibold uppercase tracking-wide text-white px-6 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5" style="background:linear-gradient(to right,#0c2d48,#134e4a);box-shadow:0 0 40px -10px rgba(34,211,238,0.3)">
           Cotizar Envío <Icon name="arrow-right" width={14} height={14} class="transition-transform duration-300" />
         </a>
-        <button id="menuToggle" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-colors" aria-label="Abrir menú">
+        <button id="menuToggle" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-colors" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false">
           <span id="menuIcon" class="flex items-center justify-center text-white"><Icon name="menu" width={20} height={20} /></span>
         </button>
       </div>
     </div>
-    <div id="mobileMenu" class="mobile-menu md:hidden mt-2 rounded-2xl px-4 py-2" style="background:rgba(255,255,255,0.03);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.08)">
+    <div id="mobileMenu" inert class="mobile-menu md:hidden mt-2 rounded-2xl px-4 py-2" style="background:rgba(255,255,255,0.03);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.08)">
       <a href="#tracker" class="block text-sm font-medium text-slate-400 hover:text-white px-4 py-3 rounded-lg hover:bg-white/5 transition-all">Rastrear Carga</a>
       <a href="#rutas" class="block text-sm font-medium text-slate-400 hover:text-white px-4 py-3 rounded-lg hover:bg-white/5 transition-all">Rutas</a>
       <a href="#servicios" class="block text-sm font-medium text-slate-400 hover:text-white px-4 py-3 rounded-lg hover:bg-white/5 transition-all">Servicios</a>

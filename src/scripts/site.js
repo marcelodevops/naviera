@@ -12,17 +12,23 @@ export function initSiteInteractions() {
     }
   }
 
+  function setMenu(open) {
+    menuOpen = open;
+    if (mobileMenu) mobileMenu.inert = !open;
+    mobileMenu?.classList.toggle('open', open);
+    menuToggle?.setAttribute('aria-expanded', String(open));
+    menuToggle?.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    updateMenuIcon(open);
+  }
+
   menuToggle?.addEventListener('click', () => {
-    menuOpen = !menuOpen;
-    mobileMenu?.classList.toggle('open', menuOpen);
-    updateMenuIcon(menuOpen);
+    setMenu(!menuOpen);
   });
 
   mobileMenu?.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      menuOpen = false;
-      mobileMenu.classList.remove('open');
-      updateMenuIcon(false);
+    link.addEventListener('click', (event) => {
+      setMenu(false);
+      if (event.detail === 0) menuToggle?.focus();
     });
   });
 
@@ -71,8 +77,10 @@ export function initSiteInteractions() {
   });
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (!href || href === '#') return;
     link.addEventListener('click', (event) => {
-      const target = document.querySelector(link.getAttribute('href'));
+      const target = document.querySelector(href);
       if (!target) return;
       event.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
